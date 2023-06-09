@@ -1,21 +1,31 @@
 <!DOCTYPE html>
+<html>
 <head>
-  <title>OpenAI Quickstart</title>
-  <link
-    rel="shortcut icon"
-    href="{{ url_for('static', filename='dog.png') }}"
-  />
-  <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}" />
+    <title>Unit Test Generator</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+   
 </head>
-
 <body>
-  <img src="{{ url_for('static', filename='dog.png') }}" class="icon" />
-  <h3>Name my pet</h3>
-  <form action="/" method="post">
-    <input type="text" name="animal" placeholder="Enter an animal" required />
-    <input type="submit" value="Generate names" />
-  </form>
-  {% if result %}
-  <div class="result">{{ result }}</div>
-  {% endif %}
+    <div class="container">
+        <h2>Unit Test Generator</h2>
+        <form method="POST" action="/" enctype="multipart/form-data" class="text-center">
+            <div class="form-group">
+                <label for="fileInput">Upload File:</label>
+                <input type="file" class="form-control-file" id="fileInput" name="file">
+            </div>
+            <div class="form-group">
+                <label for="codeInput">Paste Code (HTML):</label>
+                <textarea class="form-control" id="codeInput" name="code" rows="5"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Generate Unit Tests</button>
+        </form>
+        {% if result %}
+            <h4>Generated Unit Tests:</h4>
+            <pre>{{ result }}</pre>
+        {% endif %}
+    </div>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
+</html>
