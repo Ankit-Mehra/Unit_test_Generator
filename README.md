@@ -1,4 +1,4 @@
-# OpenAI API 
+
 This is an example of unit test generator app used in the OpenAI API [quickstart tutorial](https://beta.openai.com/docs/quickstart). It uses the [Flask](https://flask.palletsprojects.com/en/2.0.x/) web framework.
 
 ## Setup
