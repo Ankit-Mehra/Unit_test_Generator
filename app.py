@@ -31,8 +31,9 @@ def index():
 
 def generate_unit_tests_from_file(file_contents):
     """ Generate unit tests from file contents"""
+    # TODO: Add logic to process the file contents
     # Process the file contents and generate unit tests
-    # Replace the following code with your unit test generation logic
+    # To be replaced with unit test code generation logic
     unit_tests = "These are the generated unit tests from file:\n1. Test 1\n2. Test 2\n3. Test 3"
     return unit_tests
 
@@ -53,4 +54,4 @@ def generate_unit_tests_from_code(code):
 
 
 if __name__ == "__main__":
-    app.run()
+    app.run(debug=True)
